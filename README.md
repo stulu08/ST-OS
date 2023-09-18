@@ -15,6 +15,6 @@
 - Add a server under ```Connect to Server -> Local Computer```
 - Create a Vm under ```New -> Virtual Machine```
 - Configure it to your liking
-- Select the iso under ```Installation Options -> Install an os system from a bootable CD/DVD-ROM -> Image file (.iso)```
+- Select the iso under ```Installation Options -> Install an os from a CD/DVD-ROM -> Image file (.iso)```
 - The iso can be found under ```dist\x86_64\kernel.iso```
 - Start the machine and connect to it
