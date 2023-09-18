@@ -4,7 +4,10 @@
 - I suggest using [QEMU](https://packages.msys2.org/package/mingw-w64-ucrt-x86_64-qemu?repo=ucrt64) with [MSYS2](https://www.msys2.org)
 # Building
 - Create the environment using ```docker build environment -t myos-environment```
-- Run the environment using ```docker run --rm -it -v ${pwd}:/root/env myos-environment```
+- Run the environment using:
+  - PowerShell: ```docker run --rm -it -v ${pwd}:/root/env myos-environment```
+  - Windows: ```docker run --rm -it -v "%cd%":/root/env myos-environment```
+  - Linux: ```docker run --rm -it -v $(pwd):/root/env myos-environment```
 - Build using make ```make build-x86_64```
 # Running using QEMU
 - First build the iso
