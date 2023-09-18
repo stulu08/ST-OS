@@ -1,0 +1,9 @@
+# Folders
+dist
+build
+.vscode
+.vs
+
+# Files
+*.iso
+*.bin
