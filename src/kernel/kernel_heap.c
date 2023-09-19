@@ -2,15 +2,13 @@
 
 typedef struct Page Page;
 
-void* begin = HEAP_BEGIN;
-void* end = HEAP_BEGIN;
+Page* begin = NULL;
+Page* end = NULL;
 Page** freedPages = NULL;
 
-void SetupKernelHeap(){
-    begin = HEAP_BEGIN;
-    end = begin;
-
-    freedPages = AllocateNewPage();
+void SetupKernelHeap(size_t beginLower){
+    begin = end = (Page*)beginLower;
+    freedPages = (Page**)AllocateNewPage();
     freedPages[0] = NULL;
 }
 
