@@ -2,11 +2,7 @@ global error
 
 extern boot_panic
 
-errorEnd:
-    dw 1
-
 error:
-    mov [errorEnd], al
-    mov edi, [errorEnd]
+    xor edi, edi
+    mov dil, al
     call boot_panic
-    hlt

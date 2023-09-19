@@ -32,3 +32,4 @@ void console_print_set_color(uint8_t fg, uint8_t bg);
 
 void boot_panic(uint8_t code);
 void kernel_panic(char* msg);
+void total_kernel_panic(char* msg);
