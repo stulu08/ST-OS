@@ -53,9 +53,24 @@ void console_print_newline(){
 
 
 void console_print_char(char character){
-    if(character == '\n'){
+    switch (character)
+    {
+    case '\r':
+    case '\n':
         console_print_newline();
         return;
+    case '\t':
+        for(uint8_t i = 0; i < TAB_SIZE; i++)
+            console_print_char(' ');
+        return;
+    case '\b':
+        if(col > 0)
+            col--;
+        else if(row > 0)
+            row--;
+        return;
+    default:
+        break;
     }
 
     if(col > NUM_COLS){

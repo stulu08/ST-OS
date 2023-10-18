@@ -16,9 +16,9 @@ void SetupKernelHeap(size_t beginLower){
     freedPages = (Page**)AllocateNewPage();
     freedPages[0] = NULL;
 
-    print("Initilized Kernel-Heap at 0x");
+    puts("Initilized Kernel-Heap at 0x");
     print_uint64((size_t)begin, HEX);
-    print("\n");
+    puts("\n");
 }
 
 void FreePage(Page* page){

@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stddef.h>
 
+#define TAB_SIZE 4
+
 enum {
     PRINT_COLOR_BLACK = 0,
 	PRINT_COLOR_BLUE = 1,
